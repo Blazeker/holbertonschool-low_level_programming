@@ -17,20 +17,20 @@ int main(void)
 	putchar(s);
 	if (n == '9' && s == '9')
 	{
-		putchar('\n');
+	putchar('\n');
 	}
 	else
 	{
-		putchar(',');
-		putchar(' ');
+	putchar(',');
+	putchar(' ');
 	}
 	s++;
 	}
 	if (s >= '9')
 	{
-		s = '0';
+	s = '0';
 	}
-		n++;
+	n++;
 	}
 	putchar('\n');
 	return (0);
