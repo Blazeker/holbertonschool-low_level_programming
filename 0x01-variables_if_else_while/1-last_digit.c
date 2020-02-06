@@ -24,7 +24,7 @@ int main(void)
 	}
 	else if (last < 6 && last != 0)
 	{
-	printf("Last digit of %i%s%i%s", n, " is ", last, greater, "\n");
+	printf("Last digit of %i%s%i%s%s", n, " is ", last, greater, "\n");
 	}
 	return (0);
 }
