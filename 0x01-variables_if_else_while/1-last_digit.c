@@ -9,17 +9,17 @@
  */
 int main(void)
 {
-	int s;
-	char last[] = "Last digit of";
+	int n;
+	char l[] = "Last digit of";
 
 	srand(time(0));
-	s = rand() - RAND_MAX / 2;
-	printf("%s %d is %d and is ", last, s, s % 10);
-	if (s % 10 > 5)
+	n = rand() - RAND_MAX / 2;
+	printf("%s %d is %d and is ", l, n, n % 10);
+	if (n % 10 > 5)
 	{
 		printf("greater than 5\n");
 	}
-	else if (s % 10 == 0)
+	else if (n % 10 == 0)
 	{
 		printf("0\n");
 	}
