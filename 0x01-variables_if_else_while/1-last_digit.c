@@ -7,7 +7,7 @@
 int main(void)
 {
 	int n;
-	char greater[] = "and is less than 6 and not 0";
+	char greater[] = " and is less than 6 and not 0";
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
