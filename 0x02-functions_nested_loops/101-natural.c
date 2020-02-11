@@ -1,11 +1,12 @@
-#include "holberton.h"
 #include <stdio.h>
 
 /**
- * natural_numbers - Print all multiples of 3 and 5 until 1024
- */
+* main - Print the 50 first numbers of fibonacci
+* Return: 0
+*/
 
-void natural_numbers(void)
+
+int main(void)
 {
 	int c;
 	int sum = 0;
