@@ -1,11 +1,10 @@
-#include "holberton.h"
 #include <stdio.h>
 
 /**
  * fibonacci50 - Print the 50 first numbers of fibonacci
  */
 
-void fibonacci50(void)
+void main(void)
 {
 	long int a = 1;
 	long int b = 2;
