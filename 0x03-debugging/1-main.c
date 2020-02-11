@@ -13,9 +13,9 @@ int main(void)
 
 	i = 11;
 
-	while (i < 10) /* There are a infinite loop because the i isn't increasing */ 
+	while (i < 10)/*There are a infinite loop because the i isn't increasing*/
 	{
-	        putchar(i); 
+		putchar(i);
 	}
 
 	printf("Infinite loop avoided! \\o/\n");
