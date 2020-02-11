@@ -13,7 +13,7 @@ void jack_bauer(void)
 	int c = 0;
 	int s = 0;
 
-	for (c = 0; c <= 24; c++)
+	for (c = 0; c < 24; c++)
 	{
 		for (s = 0; s <= 59; s++)
 		{
