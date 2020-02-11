@@ -1,5 +1,10 @@
 #include "holberton.h"
 
+/**
+ * times_table - print all multiplications on a table
+ */
+
+
 void times_table(void)
 {
 	int c = 0;
