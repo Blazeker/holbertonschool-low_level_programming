@@ -5,6 +5,7 @@
 * add - add
 * @c : int
 * @s : int
+* return - an int
 */
 
 
