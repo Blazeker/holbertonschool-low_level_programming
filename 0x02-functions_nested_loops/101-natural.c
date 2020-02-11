@@ -17,5 +17,5 @@ void natural_numbers(void)
 		sum = c + sum;
 		}
 	}
-	printf("%d", sum);
+	printf("%d%s", sum, "\n");
 }
