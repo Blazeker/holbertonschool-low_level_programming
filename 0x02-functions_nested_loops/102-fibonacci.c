@@ -11,6 +11,7 @@ int main(void)
 	long int b = 2;
 	long int sum;
 	int cont = 0;
+
 	printf("%d%s", 1, ", ");
 	printf("%d%s", 2, ", ");
 	while (cont < 48)
