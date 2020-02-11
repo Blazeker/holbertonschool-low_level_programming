@@ -1,10 +1,11 @@
 #include <stdio.h>
 
 /**
- * fibonacci50 - Print the 50 first numbers of fibonacci
+ * main - Print the 50 first numbers of fibonacci
+ * Return: 0
  */
 
-void main(void)
+int main(void)
 {
 	long int a = 1;
 	long int b = 2;
@@ -27,4 +28,5 @@ void main(void)
 		cont++;
 	}
 	printf("\n");
+	return (0);
 }
