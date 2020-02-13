@@ -22,11 +22,11 @@ int main(void)
 			n = n / div;
 			if (n == 1)
 			{
-				printf("The largest prime factor is: %d", div);
 				s = 0;
 			}
 		}
 	}
+	printf("%d", div);
 	printf("\n");
 	return (0);
 }
