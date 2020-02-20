@@ -13,12 +13,12 @@ char *cap_string(char *s)
 	char se[] = " \t\n,;!?\"(){}";
 
 	if (s[i] >= 'a' && s[i] <= 'z')
-		str[i] = str[i] - 32;
+		s[i] = s[i] - 32;
 	while (s[i] != '\0')
 	{
-		for (j = 0; sep[j] != '\0'; j++)
+		for (j = 0; se[j] != '\0'; j++)
 		{
-			if (s[i - 1] == sep[j] && (s[i] >= 'a' && s[i] <= 'z'))
+			if (s[i - 1] == se[j] && (s[i] >= 'a' && s[i] <= 'z'))
 				s[i] = s[i] - 32;
 		}
 		i++;
