@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stddef.h>
 
 /**
  * _strchr - Return an pointer
@@ -11,7 +10,7 @@
 char *_strchr(char *s, char c)
 {
 	int i = 0;
-	char *p = NULL;
+	char *p = '\0';
 
 	for (i = 0; s[i] != '\n'; i++)
 	{
