@@ -32,7 +32,7 @@ int check(char *s, int i, int len)
 	}
 	if (s[len] == s[i])
 	{
-		return (check(s, len - 1, i + 1));
+		return (check(s, i + 1, len - 1));
 	}
 	return (0);
 }
