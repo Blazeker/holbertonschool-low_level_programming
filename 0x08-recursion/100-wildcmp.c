@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * recursive_check - checks for wild cards 
+ * recursive_check - checks for wild cards
  * @s1: an string
  * @s2: an string
  * @wildC: an int
@@ -42,9 +42,9 @@ int recursive_check(char *s1, char *s2, int wildC)
  * Return: An int
  */
 
-int wildcmp (char *s1, char *s2)
+int wildcmp(char *s1, char *s2)
 {
 	int i = 0;
 
-	return(recursive_check(s1, s2, i));
+	return (recursive_check(s1, s2, i));
 }
