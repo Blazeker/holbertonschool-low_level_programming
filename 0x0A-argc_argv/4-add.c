@@ -2,29 +2,44 @@
 #include <stdlib.h>
 
 /**
- * main - Entry Point
- * @argc: arguments
- * @argv: array pointing to arguments
- * Return: 0
+ * main - Entry point
+ * @argc: the number of arguments
+ * @argv: the elements passed to the program
+ * Return: 0 for issue and 1 for error and addition of numbers
  */
-
 int main(int argc, char *argv[])
 {
-	int i, sum = 0;
+	int n = 0, i = 0, j = 0, ans = 0;
 
-	if (argc < 1)
-		return (0);
-
-	for (i = 1; i < argc; i++)
+	if (argc == 1)
 	{
-		if (!atoi(argv[i]))
-		{
-			printf("%s\n", "Error");
-			return (1);
-		}
-		sum += atoi(argv[i]);
+		ans = 0;
+		printf("%d\n", ans);
 	}
-	printf("%d\n", sum);
-
+	else
+	{
+		for (i = 1; i < argc; i++)
+		{
+			for (j = 0; *(argv[i] + j); j++)
+			{
+				if (!((*(argv[i] + j) >= '0') && (*(argv[i] + j) <= '9')))
+				{
+					printf("Error\n");
+					return (1);
+				}
+			}
+			if ((atoi(argv[i]) > 0) || (*argv[i] == '0'))
+			{
+				n = atoi(argv[i]);
+				ans += n;
+			}
+			else
+			{
+				printf("Error\n");
+				return (1);
+			}
+		}
+		printf("%d\n", ans);
+	}
 	return (0);
 }
