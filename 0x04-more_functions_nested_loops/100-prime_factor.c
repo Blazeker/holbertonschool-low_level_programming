@@ -21,9 +21,7 @@ int main(void)
 		{
 			n = n / div;
 			if (n == 1)
-			{
-				s = 0;
-			}
+				break;
 		}
 	}
 	printf("%d", div);
