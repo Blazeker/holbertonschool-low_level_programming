@@ -13,7 +13,12 @@ char *str_concat(char *s1, char *s2)
 	int i = 0, j = 0, cont = 0;
 	char *s;
 
-	if (s1 == NULL || s2 == NULL)
+	if (s1 == NULL)
+	{
+		return (NULL);
+	}
+
+	if (s2 == NULL)
 	{
 		return (NULL);
 	}
@@ -27,7 +32,7 @@ char *str_concat(char *s1, char *s2)
 	}
 
 	cont = i + j;
-	s = malloc((cont + 2) * sizeof(char));
+	s = malloc((cont + 1) * sizeof(char));
 	if (s == NULL)
 		return (NULL);
 	i = 0;
