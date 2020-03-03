@@ -10,37 +10,37 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	int end1, end2, i = 0;
-	char *array;
+	int i, j, k = 0;
+	char *s;
 
 	if (s1 == NULL || s2 == NULL)
 		s1 = s2 = "";
 
-	for (end1 = 0; end1 <= *s1; end1++)
+	for (i = 0; i <= *s1; i++)
 	{
 	}
 
-	for (end2 = 0; end2 <= *s2; end2++)
+	for (j = 0; j <= *s2; j++)
 	{
 	}
 
-	array = malloc(sizeof(char) * (end1 + end2 + 1));
+	s = malloc(sizeof(char) * (i + j + 1));
 
-	if (array == NULL)
+	if (s == NULL)
 		return (NULL);
 
 	while (*s1)
 	{
-		array[i] = *s1;
-		i++;
+		s[k] = *s1;
+		k++;
 		s1++;
 	}
 
 	while (*s2)
 	{
-		array[i] = *s2;
-		i++;
+		array[k] = *s2;
+		k++;
 		s2++;
 	}
-	return (array);
+	return (s);
 }
