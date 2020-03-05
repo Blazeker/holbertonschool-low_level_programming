@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * strinc_nconcat - COncat n bytes of 2 strings
+ * string_nconcat - COncat n bytes of 2 strings
  * @s1 : an string
  * @s2 : an string
  * @n : an int
