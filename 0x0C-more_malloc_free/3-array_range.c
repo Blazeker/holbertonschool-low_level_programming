@@ -10,23 +10,16 @@
 
 int *array_range(int min, int max)
 {
-	int *s, i = 0, temp, len;
+	int *s, i = 0;
 
 	if (min > max)
 		return (NULL);
-	temp = min;
-	while (temp <= max)
-	{
-		len++;
-		temp++;
-	}
-	s = malloc(sizeof(min) * len);
+	s = malloc(sizeof(min) * (max - min + 1));
 	if (s == NULL)
 		return (NULL);
-	while (min <= max)
+	for (i = min; i <= max; i++)
 	{
-		s[i] = min;
-		i++, min++;
+		s[i - min] = i;
 	}
 	return (s);
 }
