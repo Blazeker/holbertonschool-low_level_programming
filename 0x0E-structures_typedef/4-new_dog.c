@@ -1,7 +1,6 @@
 #include "dog.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 /**
  * new_dog - print
@@ -26,9 +25,15 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	len1 = strlen(name);
-	len2 = strlen(owner);
-
+	for (i = 0; i < name[i]; i++)
+	{
+		len1++;
+	}
+	for (i = 0; i < owner[i]; i++)
+	{
+		len2++;
+	}
+	
 	new_name = malloc(sizeof(char) * len1 + 1);
 	if(new_name == NULL)
 		return (NULL);
