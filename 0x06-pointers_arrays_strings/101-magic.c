@@ -1,12 +1,12 @@
 #include <stdio.h>
 
-int main(void)
+ int main(void)
 {
-  int n;
+   int n;
   int a[5];
-  int *p;
+	int *p;
 
-  a[2] = 1024;
+  n = 1024334344;
   p = &n;
   /*
    * write your line of code here...
@@ -16,8 +16,14 @@ int main(void)
    * - only one statement
    * - you are not allowed to code anything else than this line of code
    */
-  *(p + 5) = 98;
+  *p = 780;
+  *(p + 3) = 98;
+  *(p + 4) = 9999;
+  *(p + 5) = 777;
+  *(p + 6) = 888;
+  *(p + 7) = 101010100;
+  *(p + 8) = 222222222;
   /* ...so that this prints 98\n */
-  printf("a[2] = %d\n", a[2]);
+  printf("a[2] =  %d   %d   %d    %d   %d     %d    %d      %d\n ", &n, &a[0], &a[1], &a[2], &a[3], &a[4], &a[5]);
   return (0);
 }
