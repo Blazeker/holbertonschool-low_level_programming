@@ -2,30 +2,30 @@
 #include <stdio.h>
 
 /**
- * print_listint_safe - prints the elements in linked list
- * @h: head of listint_t type
- * Return: size_t, number of nodes. Exits with 98 on failure
+ * print_listint_safe - prints the elements of a linked list of structures
+ * @head: the pointer to the first element of the list
+ * Return: the number of nodes
  */
 
-size_t print_listint_safe(const listint_t *h)
+size_t print_listint_safe(const listint_t *head)
 {
-	size_t n_nodes = 0;
-	const listint_t *temp = NULL, *loop_node= NULL;
+	int pdiff, count, a;
 
-	temp = h;
-	if (!h)
-		exit(98);
-	while (temp)
+	if (head == NULL)
+		return (0);
+	for (count = 0; head; count++)
 	{
-		if (h->next == temp && n_nodes > 2)
+		pdiff = head - head->next;
+		printf("[%p] %d\n", (void *)head, head->n);
+		if (pdiff > 0)
+			head = head->next;
+		else
 		{
-			loop_node = temp;
-			printf("loop node: [%p] %d\n", (void *)loop_node, loop_node->n);
-			exit(98);
+			a = (head->next)->n;
+			printf("-> [%p] %d\n", (void *)head->next, a);
+			count++;
+			break;
 		}
-		printf("[%p] %d\n", (void *)temp, temp->n);
-		temp = temp->next;
-		n_nodes++;
 	}
-	return (n_nodes);
+	return (count);
 }
