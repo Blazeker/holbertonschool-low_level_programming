@@ -1,73 +1,48 @@
-#include "lists.h"
+#include <stdio.h>
 #include <stdlib.h>
-
+#include "lists.h"
 /**
- * create_dnode - creates a new double linked
- * @n: data to add to node
- * Return: pointer to newly allocated
- */
-
-dlistint_t *create_dnode(const int n)
-{
-	dlistint_t *new_node = NULL;
-
-	new_node = malloc(sizeof(dlistint_t));
-	if (!new_node)
-		return (NULL);
-
-	new_node->next = NULL;
-	new_node->prev = NULL;
-	new_node->n = n;
-
-	return (new_node);
-}
-
-/**
- * insert_dnodeint_at_index - inserts a node at position
- * @h: double pointer to the head, so we can modify if needed
- * @idx: index to insert new node at
- * @n: data to add to new node
- * Return: pointer to new element
+ * insert_dnodeint_at_index - insert node at nth index of double linked
+ * @h: pointer to head
+ * @idx: integer
+ * @n: integer
+ * Return: address of node inserted
  */
 
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *new_node = NULL, *temp = NULL;
+	dlistint_t *new, *temp, *temp2;
 	unsigned int i = 0;
+	unsigned int number_nodes = 0;
 
-	new_node = create_dnode(n);
-	if (!new_node)
-		return (NULL);
-	if (!h || !(*h))
-		*h = new_node;
-	else
+	temp = *h;
+	while (temp)
 	{
-		temp = *h;
-		while (idx != i++ && temp->next)
-			temp = temp->next;
-		if (temp->next)
-			new_node->prev = temp->prev;
-		else
-			new_node->prev = temp;
-		if (idx == i)
-		{
-			temp->next = new_node;
-			new_node->prev = temp;
-		}
-		else if (idx == i - 1)
-		{
-			if (temp->prev)
-				temp->prev->next = new_node;
-			else
-				*h = new_node;
-			temp->prev = new_node;
-			new_node->next = temp;
-		}
-		else
-		{
-			free(new_node);
-			return (NULL);
-		}
+		number_nodes += 1;
+		temp = temp->next;
 	}
-	return (new_node);
+	new = malloc(sizeof(dlistint_t));
+	if (!new)
+		return (NULL);
+	if (idx == 0)
+		return (add_dnodeint(h, n));
+	if (idx == number_nodes)
+		return (add_dnodeint_end(h, n));
+	new->n = n;
+	temp = *h;
+	while (temp)
+	{
+		if (i == idx - 1)
+		{
+			temp2 = temp->next;
+			temp->next = new;
+			new->prev = temp;
+			new->next = temp2;
+			temp2->prev = new;
+			return (new);
+		}
+		temp = temp->next;
+		i++;
+	}
+	return (NULL);
 }
